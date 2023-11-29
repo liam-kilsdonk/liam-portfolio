@@ -61,7 +61,9 @@ h3 {
   font-weight: 700;
 }
 strong {
-  color: var(--gold) !important;
+  background: -webkit-linear-gradient(90deg, #a4133c, #590d22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
