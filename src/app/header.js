@@ -7,7 +7,11 @@ function Header() {
             <div className={styles.header}>
                 <div className={styles.header_wrap}>
                     <div className={styles.header_block}>
-                        <a href="#">Liam Kilsdonk</a>
+                        <img
+                        src="../Union.png"
+                        alt="background_ellipse"
+                        height="20px"
+                        />
                     </div>
                     <div className={styles.header_nav}>
                         <nav>

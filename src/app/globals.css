@@ -14,6 +14,7 @@
 --> ALGEMEEN : Dit is de algemene styling van de pagina.
 --> PARAGRAPH : Dit is de styling van de texten.
 --> HOVER AND AFTER : Dit is de styling van de hover en after effecten.
+--> GLOBAL DIVS : Hier staan Section, body tags ect.
 
 */
 
@@ -139,4 +140,22 @@ a:hover::after {
 a {
   position: relative;
   width: fit-content;
+}
+
+/****************** GLOBAL DIVS ******************/
+
+section {
+  padding: 50px 150px 50px 150px;
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    padding: 50px 50px 50px 50px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 50px 50px 50px 50px !important;
+  }
 }

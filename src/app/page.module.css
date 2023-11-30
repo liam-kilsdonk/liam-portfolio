@@ -14,6 +14,7 @@
 --> HEADER : Dit is de header van de pagina.
 --> FOOTER : Dit is de footer van de pagina.
 --> LANDING : Dit is de landing van de pagina.
+--> ABOUT : Dit is de about van de pagina.
 --> MISC : Dit is de styling van de overige elementen.
 
 */
@@ -43,6 +44,12 @@
 .header_nav nav {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
 }
 
 /****************** FOOTER ******************/
@@ -85,6 +92,7 @@
   .footer_block {
     width: 100%;
     text-align: center;
+    align-items: center;
   }
 }
 
@@ -121,12 +129,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 150px 20px 150px;
 }
 
 .landing_left {
   width: 50%;
-  background-color: red;
   padding: 120px 0px;
   display: flex;
   flex-direction: column;
@@ -138,7 +144,71 @@
 
 .landing_right {
   width: 50%;
-  background-color: blue;
+  display: contents;
+}
+
+.landing_right img {
+  height: 100%;
+  max-height: 802px;
+  max-width: 988px;
+}
+
+@media only screen and (max-width: 1624px) {
+  .landing_right img {
+    max-height: 400.13px;
+    max-width: 603px;
+  }  
+}
+
+@media only screen and (max-width: 1024px) {
+  .landing_wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .landing_left, .landing_right {
+    width: 100% !important;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .landing_right img {
+    max-height: 325px;
+    max-width: 400.37px;
+  }  
+
+}
+
+@media only screen and (max-width: 768px) {
+ 
+}
+
+@media only screen and (max-width: 450px) {
+ .landing_right {
+  display: none;
+ }
+ .landing_left {
+  padding: 50px 0px !important;
+}
+}
+
+/****************** ABOUT ******************/
+
+.about_wrap {
+}
+.about_up {
+  
+}
+.about_down{
+  background-color: rgb(128, 128, 204);
+}
+.about_down img{
+  max-width: 1300px;
+}
+
+.about_up_left {
+  width: 65%;
 }
 
 /****************** MISC ******************/
