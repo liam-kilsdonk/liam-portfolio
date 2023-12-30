@@ -15,7 +15,7 @@ function Header() {
                     </div>
                     <div className={styles.header_nav}>
                         <nav>
-                            <a href="#">About</a>
+                            <a href="#about">About</a>
                             <a href="#">Projects</a>
                             <a href="#">Socials</a>
                         </nav>

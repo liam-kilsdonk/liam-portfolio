@@ -15,6 +15,7 @@
 --> FOOTER : Dit is de footer van de pagina.
 --> LANDING : Dit is de landing van de pagina.
 --> ABOUT : Dit is de about van de pagina.
+--> SLIDER : Dit is de slider van de pagina.
 --> MISC : Dit is de styling van de overige elementen.
 
 */
@@ -22,10 +23,12 @@
 /****************** HEADER ******************/
 
 .header {
-  background-color: var(--color-white);
+  
   width: 100%;
   padding: 20px 150px 20px 150px;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  backdrop-filter: blur(10px);
 }
 
 .header_wrap {
@@ -49,6 +52,10 @@
 @media only screen and (max-width: 768px) {
   .header {
     display: none;
+  }
+
+  #space {
+    display: none !important;
   }
 }
 
@@ -190,7 +197,7 @@
  }
  .landing_left {
   padding: 50px 0px !important;
-}
+  }
 }
 
 /****************** ABOUT ******************/
@@ -205,10 +212,145 @@
 }
 .about_down img{
   max-width: 1300px;
+  width: 100%;
 }
 
 .about_up_left {
   width: 65%;
+}
+
+@media only screen and (max-width: 1624px) {
+ 
+}
+
+@media only screen and (max-width: 1024px) {
+  .about_up_left {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ 
+}
+
+@media only screen and (max-width: 450px) {
+
+}
+
+/****************** SLIDER ******************/
+
+.slider_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.slider_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slider_middle {
+
+}
+
+.slider_bottom {
+
+}
+
+.slider_right {
+  width: 100px;
+  height: 50px;
+  
+  font-weight: bold;
+  font-size: 36px;
+  position: relative;
+  animation: slider_test_1 5s linear infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all 3s ease-in-out;
+}
+
+.slider_left {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  font-weight: bold;
+  position: relative;
+  animation: slider_test_2 5s linear infinite;
+}
+
+
+@keyframes slider_test_1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: calc(100% - 100px);
+  }
+}
+
+@keyframes slider_test_2 {
+  from {
+    left: calc(100% - 100px); /* Start from the right edge */
+  }
+  to {
+    left: 0; /* Move to the left edge */
+  }
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+#sliderContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Adjust to the width of your text */
+  height: 50px; /* Adjust to the height of your text */
+}
+
+.sliderText {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  position: absolute;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#slider_test_1 {
+  background-color: red;
+  animation-name: slider_test_1;
+}
+
+#slider_test_2 {
+  background-color: blue;
+  animation-name: slider_test_2;
+}
+
+@keyframes slider_test_1 {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 100px);
+  }
+}
+
+@keyframes slider_test_2 {
+  0%, 100% {
+    left: calc(100% - 100px);
+  }
+  50% {
+    left: 0;
+  }
 }
 
 /****************** MISC ******************/

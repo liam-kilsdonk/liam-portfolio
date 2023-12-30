@@ -2,9 +2,13 @@ import React from "react";
 import styles from "./page.module.css";
 
 function Bottom() {
+
+    const date = new Date();
+    const year = date.getFullYear();
+
     return (
         <div className={styles.bottom}>
-            <p>Copyright © 2023 Liam Kilsdonk</p>
+            <p>Copyright © {year} Liam Kilsdonk</p>
         </div>
     );
 }
