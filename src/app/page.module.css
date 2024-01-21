@@ -267,7 +267,7 @@
   font-weight: bold;
   font-size: 36px;
   position: relative;
-  animation: slider_test_1 5s linear infinite;
+  animation: slider_test_1 22s linear infinite;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   transition: all 3s ease-in-out;
@@ -279,7 +279,7 @@
   background-color: red;
   font-weight: bold;
   position: relative;
-  animation: slider_test_2 5s linear infinite;
+  animation: slider_test_2 22s linear infinite;
 }
 
 
@@ -320,7 +320,7 @@
   height: 100%;
   font-weight: bold;
   position: absolute;
-  animation-duration: 12s;
+  animation-duration: 22s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
