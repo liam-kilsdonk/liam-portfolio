@@ -76,6 +76,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  margin: 0px 50px 0px 50px !important;
+}
+
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 40px !important;

@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import styles from "./page.module.css";
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Landing() {
 
@@ -18,6 +19,7 @@ function Landing() {
                     type="button"
                     onClick={() => setColor(color + 1)}
                 >Blue</button>
+                <CircularProgress />
             </div>
             <div className={styles.landing_right}>
                 <img
