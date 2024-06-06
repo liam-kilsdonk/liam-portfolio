@@ -15,6 +15,7 @@
 --> FOOTER : Dit is de footer van de pagina.
 --> LANDING : Dit is de landing van de pagina.
 --> ABOUT : Dit is de about van de pagina.
+--> BLOG : Dit is de blog van de pagina.
 --> SLIDER : Dit is de slider van de pagina.
 --> MISC : Dit is de styling van de overige elementen.
 
@@ -204,12 +205,7 @@ test
 
 /****************** ABOUT ******************/
 
-.about_wrap {
-}
-.about_up {
-  
-}
-.about_down{
+.about_down {
   background-color: rgb(128, 128, 204);
 }
 .about_down img{
@@ -239,6 +235,42 @@ test
 
 }
 
+/****************** BLOG ******************/
+
+.Blog_wrap {
+  display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.Blog_content {
+  background-color: red;
+  height: 200px;
+  width: 100%;
+  border-radius: 60px;
+  border-bottom-right-radius: 0px;
+}
+.Blog_content:nth-child(3n-2) {
+  background-color: rgb(164, 82, 82);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 60px;
+}
+
+.Blog_content:nth-child(2) {
+  background-color: rgb(74, 210, 20);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 60px;
+}
+
+.Blog_content:nth-child(5n-5) {
+  background-color: rgb(12, 123, 220);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 60px;
+
+}
+
 /****************** SLIDER ******************/
 
 .slider_wrap {
@@ -248,74 +280,42 @@ test
   overflow: hidden;
 }
 
-.slider_top {
+.slider_pack {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.slider_middle {
-
-}
-
-.slider_bottom {
-
-}
-
 .slider_right {
-  width: 100px;
-  height: 50px;
-  
   font-weight: bold;
-  font-size: 36px;
+  font-size: 10em !important;
   position: relative;
-  animation: slider_test_1 22s linear infinite;
+  animation: slider_test_1 46s linear infinite;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  transition: all 3s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.slider_pack .slider_right:hover {
+  color: var(--color-primary) !important;
+  transition: all 0.5s ease-in-out;
 }
 
 .slider_left {
-  width: 100px;
-  height: 50px;
-  background-color: red;
   font-weight: bold;
+  font-size: 10em !important;
   position: relative;
-  animation: slider_test_2 22s linear infinite;
+  animation: slider_test_2 46s linear infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all 1s ease-in-out;
 }
 
-
-@keyframes slider_test_1 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: calc(100% - 100px);
-  }
+.slider_pack .slider_left:hover {
+  color: var(--color-primary) !important;
+  transition: all 250ms ease-in-out;
 }
 
-@keyframes slider_test_2 {
-  from {
-    left: calc(100% - 100px); /* Start from the right edge */
-  }
-  to {
-    left: 0; /* Move to the left edge */
-  }
-}
-@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-}
-
-#sliderContainer {
-  overflow: hidden;
-  position: relative;
-  width: 100%; /* Adjust to the width of your text */
-  height: 50px; /* Adjust to the height of your text */
-}
 
 .sliderText {
   width: 100%;
@@ -325,16 +325,6 @@ test
   animation-duration: 22s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
-
-#slider_test_1 {
-  background-color: red;
-  animation-name: slider_test_1;
-}
-
-#slider_test_2 {
-  background-color: blue;
-  animation-name: slider_test_2;
 }
 
 @keyframes slider_test_1 {

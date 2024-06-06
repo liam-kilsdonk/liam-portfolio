@@ -6,6 +6,7 @@ import Header from './header.js'
 import Landing from './landing.js'
 import About from './about'
 import Slider from './slider'
+import Blog from './blog'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Landing />
       <Line />
       <About />
+      <Line />
+      <Blog />
       <Line />
       <Slider />
       <Footer />
