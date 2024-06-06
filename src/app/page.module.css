@@ -19,8 +19,6 @@
 --> SLIDER : Dit is de slider van de pagina.
 --> MISC : Dit is de styling van de overige elementen.
 
-test
-
 */
 
 /****************** HEADER ******************/
@@ -275,6 +273,7 @@ test
 
 .slider_wrap {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -282,40 +281,59 @@ test
 
 .slider_pack {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
 }
 
 .slider_right {
   font-weight: bold;
-  font-size: 10em !important;
+  font-size: 36px;
   position: relative;
-  animation: slider_test_1 46s linear infinite;
+  animation: slider_test_1 22s linear infinite;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  transition: all 1s ease-in-out;
-}
-
-.slider_pack .slider_right:hover {
-  color: var(--color-primary) !important;
-  transition: all 0.5s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 
 .slider_left {
   font-weight: bold;
-  font-size: 10em !important;
   position: relative;
-  animation: slider_test_2 46s linear infinite;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transition: all 1s ease-in-out;
+  animation: slider_test_2 22s linear infinite;
 }
 
-.slider_pack .slider_left:hover {
-  color: var(--color-primary) !important;
-  transition: all 250ms ease-in-out;
+
+@keyframes slider_test_1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: calc(100% - 100px);
+  }
 }
 
+@keyframes slider_test_2 {
+  from {
+    left: calc(100% - 100px); /* Start from the right edge */
+  }
+  to {
+    left: 0; /* Move to the left edge */
+  }
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+#sliderContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Adjust to the width of your text */
+  height: 50px; /* Adjust to the height of your text */
+}
 
 .sliderText {
   width: 100%;
@@ -325,23 +343,37 @@ test
   animation-duration: 22s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  transition: all 0.2s ease-in-out;
+}
+
+#slider_test_1 {
+  background-color: red;
+  animation-name: slider_test_1;
+}
+
+#slider_test_2 {
+  background-color: blue;
+  animation-name: slider_test_2;
 }
 
 @keyframes slider_test_1 {
   0%, 100% {
-    left: 0;
+    left: 0; /* Start and end at the center of the screen */
   }
-  50% {
-    left: calc(100% - 100px);
+  25% {
+    left: calc(-50% + 50px); /* Move to the left edge */
+  }
+  75% {
+    left: calc(50% - 50px); /* Move to the right edge */
   }
 }
 
 @keyframes slider_test_2 {
   0%, 100% {
-    left: calc(100% - 100px);
+    left: calc(100% - 100px); /* Start and end at the right edge */
   }
-  50% {
-    left: 0;
+  100% {
+    left: calc(-50% + 50px); /* Move to the left edge */
   }
 }
 
