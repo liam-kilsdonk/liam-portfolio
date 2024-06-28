@@ -15,9 +15,11 @@ function Header() {
                     </div>
                     <div className={styles.header_nav}>
                         <nav>
+                            <a href="/">Home</a>
                             <a href="#about">About</a>
                             <a href="#blog">Projects</a>
                             <a href="#">Socials</a>
+                            <a href="dashboard">Sign in</a>
                         </nav>
                     </div>
                 </div>

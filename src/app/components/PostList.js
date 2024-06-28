@@ -2,6 +2,7 @@
 // components/PostList.js
 import { useState, useEffect } from 'react';
 import { getFirestore, collection, query, orderBy, getDocs } from 'firebase/firestore';
+import styles from "../page.module.css";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -15,19 +16,21 @@ const PostList = () => {
       setPosts(postsData);
     };
     fetchPosts();
-  }, []);
+  }, [db]);
 
   return (
-    <div>
-      <h2>Blog Posts</h2>
-      {posts.map(post => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.description}</p>
-          {post.imageURL && <img src={post.imageURL} alt={post.title} />}
-        </div>
-      ))}
-    </div>
+    <section id="blog">
+      <div className={styles.Blog_wrap}>
+        {posts.map(post => (
+          <div key={post.id} className={styles.Blog_content}>
+            {post.imageURL && <img src={post.imageURL} alt={post.title} />}
+            <div className={styles.Blog_text}>
+              <p>{post.title}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -24,7 +24,7 @@
 /****************** HEADER ******************/
 
 .header {
-  
+
   width: 100%;
   padding: 20px 150px 20px 150px;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.25);
@@ -83,11 +83,13 @@
   .footer {
     padding: 50px 100px 50px 100px !important;
   }
+
   .footer_wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: none !important;
   }
+
   .footer_block {
     width: 50%;
   }
@@ -97,6 +99,7 @@
   .footer {
     padding: 50px 50px 50px 50px !important;
   }
+
   .footer_block {
     width: 100%;
     text-align: center;
@@ -108,11 +111,9 @@
 
 .bottom {
   background: rgb(164, 19, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(164, 19, 60, 1) 15%,
-    rgba(89, 13, 34, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(164, 19, 60, 1) 15%,
+      rgba(89, 13, 34, 1) 100%);
 }
 
 .bottom p {
@@ -165,7 +166,7 @@
   .landing_right img {
     max-height: 400.13px;
     max-width: 603px;
-  }  
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -174,7 +175,8 @@
     flex-direction: column-reverse;
   }
 
-  .landing_left, .landing_right {
+  .landing_left,
+  .landing_right {
     width: 100% !important;
     display: flex;
     align-content: center;
@@ -184,20 +186,19 @@
   .landing_right img {
     max-height: 325px;
     max-width: 400.37px;
-  }  
+  }
 
 }
 
-@media only screen and (max-width: 768px) {
- 
-}
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 450px) {
- .landing_right {
-  display: none;
- }
- .landing_left {
-  padding: 50px 0px !important;
+  .landing_right {
+    display: none;
+  }
+
+  .landing_left {
+    padding: 50px 0px !important;
   }
 }
 
@@ -206,7 +207,8 @@
 .about_down {
   background-color: rgb(128, 128, 204);
 }
-.about_down img{
+
+.about_down img {
   max-width: 1300px;
   width: 100%;
 }
@@ -215,9 +217,7 @@
   width: 65%;
 }
 
-@media only screen and (max-width: 1624px) {
- 
-}
+@media only screen and (max-width: 1624px) {}
 
 @media only screen and (max-width: 1024px) {
   .about_up_left {
@@ -225,31 +225,29 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
- 
-}
+@media only screen and (max-width: 768px) {}
 
-@media only screen and (max-width: 450px) {
-
-}
+@media only screen and (max-width: 450px) {}
 
 /****************** BLOG ******************/
 
 .Blog_wrap {
   display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .Blog_content {
+  position: relative;
   background-color: red;
   height: 200px;
   width: 100%;
   border-radius: 60px;
   border-bottom-right-radius: 0px;
+  overflow: hidden;
 }
+
 .Blog_content:nth-child(3n-2) {
   background-color: rgb(164, 82, 82);
   border-bottom-left-radius: 0px;
@@ -266,7 +264,23 @@
   background-color: rgb(12, 123, 220);
   border-top-right-radius: 0px;
   border-bottom-right-radius: 60px;
+}
 
+.Blog_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Blog_text {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  /* Adjust this color as needed */
 }
 
 /****************** SLIDER ******************/
@@ -307,6 +321,7 @@
   from {
     left: 0%;
   }
+
   to {
     left: calc(100% - 100px);
   }
@@ -314,25 +329,55 @@
 
 @keyframes slider_test_2 {
   from {
-    left: calc(100% - 100px); /* Start from the right edge */
+    left: calc(100% - 100px);
+    /* Start from the right edge */
   }
+
   to {
-    left: 0; /* Move to the left edge */
+    left: 0;
+    /* Move to the left edge */
   }
 }
+
 @keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
 }
 
 #sliderContainer {
   overflow: hidden;
   position: relative;
-  width: 100%; /* Adjust to the width of your text */
-  height: 50px; /* Adjust to the height of your text */
+  width: 100%;
+  /* Adjust to the width of your text */
+  height: 50px;
+  /* Adjust to the height of your text */
 }
 
 .sliderText {
@@ -357,23 +402,35 @@
 }
 
 @keyframes slider_test_1 {
-  0%, 100% {
-    left: 0; /* Start and end at the center of the screen */
+
+  0%,
+  100% {
+    left: 0;
+    /* Start and end at the center of the screen */
   }
+
   25% {
-    left: calc(-50% + 50px); /* Move to the left edge */
+    left: calc(-50% + 50px);
+    /* Move to the left edge */
   }
+
   75% {
-    left: calc(50% - 50px); /* Move to the right edge */
+    left: calc(50% - 50px);
+    /* Move to the right edge */
   }
 }
 
 @keyframes slider_test_2 {
-  0%, 100% {
-    left: calc(100% - 100px); /* Start and end at the right edge */
-  }
+
+  0%,
   100% {
-    left: calc(-50% + 50px); /* Move to the left edge */
+    left: calc(100% - 100px);
+    /* Start and end at the right edge */
+  }
+
+  100% {
+    left: calc(-50% + 50px);
+    /* Move to the left edge */
   }
 }
 
@@ -383,9 +440,7 @@
   width: 100%;
   height: 20px;
   background: rgb(164, 19, 60);
-  background: linear-gradient(
-    90deg,
-    rgba(164, 19, 60, 1) 0%,
-    rgba(89, 13, 34, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(164, 19, 60, 1) 0%,
+      rgba(89, 13, 34, 1) 100%);
 }
