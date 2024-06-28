@@ -8,6 +8,12 @@ import About from './about'
 import Slider from './slider'
 import Blog from './blog'
 
+// pure testing
+import Login from './components/Login';
+import Signup from './components/Signup';
+import AddPost from './components/AddPost';
+import PostList from './components/PostList';
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -21,6 +27,11 @@ export default function Home() {
       <Slider />
       <Footer />
       <Bottom />
+      // pure testing
+      <Signup />
+      <Login />
+      <AddPost />
+      <PostList />
     </main>
   )
 }
